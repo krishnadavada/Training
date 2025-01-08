@@ -5,6 +5,7 @@ class Solution6 {
         int close=0;
         //max is for calculate the valid pair
         int len=0;
+        int max=0;
 
         //left to right traversion
         for(int i=0;i<s.length();i++){
@@ -16,6 +17,7 @@ class Solution6 {
             }
             if(open==close){
                 len=open+close;
+                max=Math.max(max,len);
             }
             //for invalid
             else if(close>open){
@@ -37,6 +39,7 @@ class Solution6 {
             }
             if(open==close){
                 len=open+close;
+                max=Math.max(max,len);
             }
             else if(open>close){
                 open=0;
@@ -56,7 +59,7 @@ class Solution6 {
  //time complexity : O(n)
  //space complexity : O(1)
 
-// The first solution finds the length of the longest valid parentheses substring using two traversals. It counts left and right parentheses, updating the maximum length when a valid pair is found, and resets the counters when invalid sequences are encountered.
+// The first solution finds the length of the longest valid parentheses substring using two traversals. It counts open and close parentheses, updating the maximum length when a valid pair is found, and resets the counters when invalid sequences are encountered.
 
 // Time Complexity: O(n) for both solutions as each array or string is traversed once.
 // Space Complexity: O(1) for both solutions since only a constant amount of extra space is used for variables.
