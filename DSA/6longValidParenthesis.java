@@ -1,49 +1,49 @@
 class Solution6 {
     public int longestValidParentheses(String s) {
         //initialize left and right counter as 0
-        int l=0;
-        int r=0;
+        int open=0;
+        int close=0;
         //max is for calculate the valid pair
-        int max=0;
+        int len=0;
 
         //left to right traversion
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)=='('){
-                l++;
+                open++;
             }
             else{
-                r++;
+                close++;
             }
-            if(l==r){
-                max=Math.max(max,l*2);
+            if(open==close){
+                len=open+close;
             }
             //for invalid
-            else if(r>l){
-                l=0;
-                r=0;
+            else if(close>open){
+                open=0;
+                close=0;
             }
         }
 
         //right to left traversion<(()>
-        l=0;
-        r=0;
+        open=0;
+        close=0;
 
         for(int i=s.length()-1;i>=0;i--){
             if(s.charAt(i)=='('){
-                l++;
+                open++;
             }
             else{
-                r++;
+                close++;
             }
-            if(l==r){
-                max=Math.max(max,l*2);
+            if(open==close){
+                len=open+close;
             }
-            else if(l>r){
-                l=0;
-                r=0;
+            else if(open>close){
+                open=0;
+                close=0;
             }
         }
-        return max;
+        return len;
     }
 
     public static void main(String[] args) {
@@ -57,8 +57,6 @@ class Solution6 {
  //space complexity : O(1)
 
 // The first solution finds the length of the longest valid parentheses substring using two traversals. It counts left and right parentheses, updating the maximum length when a valid pair is found, and resets the counters when invalid sequences are encountered.
-
-// The second solution efficiently finds the second largest element in an array by iterating once through the array while maintaining two variables to track the largest and second largest elements.
 
 // Time Complexity: O(n) for both solutions as each array or string is traversed once.
 // Space Complexity: O(1) for both solutions since only a constant amount of extra space is used for variables.
