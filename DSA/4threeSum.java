@@ -41,7 +41,7 @@ class Solution4 {
 
     public static void main(String[] args) {
         Solution4 solution = new Solution4();
-        int[] nums = {-1, 0, 1, 2, -1, -4};
+        int[] nums = {-1, 0, 1, 2, -1, -4};                                                
         List<List<Integer>> triplets = solution.threeSum(nums);
         System.out.println(triplets);  // Expected output: [[-1, -1, 2], [-1, 0, 1]]
     }
