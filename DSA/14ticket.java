@@ -1,5 +1,5 @@
 import java.util.*;
-public class Solution14 {
+class Solution14 {
     public int timeRequiredToBuy(int[] tickets, int k) {
         Queue<Integer> queue=new LinkedList<>();
         for(int i=0;i<tickets.length;i++){
@@ -34,3 +34,8 @@ public class Solution14 {
       System.out.println("Time required to buy tickets: " + solution.timeRequiredToBuy(tickets, k));
   }
 } 
+
+ //time complexity : O(n*m)
+ //space complexity : O(n)
+
+//This code calculates the time required for a person at position k to buy tickets, given each person in a queue can buy one ticket at a time. A queue tracks the order of people, and each person is processed in a circular manner until their ticket requirement is met. The program stops when the person at index k has no tickets left.
