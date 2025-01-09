@@ -27,7 +27,7 @@ class Solution {
     }
 }
 
- //time complexity : O(n*n)
+ //time complexity : O(n^2)
  //space complexity : O(1)
 
 //  The given code implements the two-sum problem using a brute-force approach. It uses two nested loops to check every possible pair of numbers in the array. For each pair, it checks if the sum of the two numbers equals the target value, and if so, returns their indices.

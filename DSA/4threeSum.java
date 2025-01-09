@@ -47,7 +47,7 @@ class Solution4 {
     }
 }
 
- //time complexity : O(n*n)
+ //time complexity : O(n^2)
  //space complexity : O(n)
 
 // The solution uses a sorted array and the two-pointer approach to find all unique triplets that sum to zero. It iterates through the array while skipping duplicates, using two pointers to find valid pairs that, when added to the current element, sum to zero.
