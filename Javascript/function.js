@@ -80,3 +80,32 @@ sum2()//NAN
 //why?
 //create private scope
 //avoide global namespace pollution
+
+// function sum(a,b){
+//     return a+b;
+// }
+// function sum(a,b,c){
+//     return a+b+c;
+// }
+// console.log(sum(2,3)); 
+//NAN
+
+// function sum(a,b,c){
+//     return a+b+c;
+// }
+
+// function sum(a,b){
+//     return a+b;
+// }
+
+// console.log(sum(2,3)); 
+//return 5
+
+function sum(a,b)
+{
+    console.log(a,b)
+}
+sum`hi my name ${id} krishna`
+//['hi my name','krishna']
+//name `${'hi'} my name shreya`
+//['', ' my name shreya', raw: Array(2)]
