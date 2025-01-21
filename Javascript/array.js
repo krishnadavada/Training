@@ -42,6 +42,7 @@ console.log(arr2);
 //for insert in between
 arr2.splice(1,0,7);//return 1(1 ele insert)
 console.log(arr2);
+
 //for delete
 arr2.splice(1,1)
 console.log(arr2)
@@ -145,3 +146,4 @@ console.log(ar)
 
 //same for every but for all ele
 //for [] true
+

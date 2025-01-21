@@ -109,3 +109,11 @@ sum`hi my name ${id} krishna`
 //['hi my name','krishna']
 //name `${'hi'} my name shreya`
 //['', ' my name shreya', raw: Array(2)]
+
+
+function name(){
+    function name1(){
+       aaa=123
+    }
+}
+console.log(aaa)
